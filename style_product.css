@@ -1,0 +1,137 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: hsl(30, 38%, 92%);
+}
+  
+  #description h1{
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 15px;
+    opacity: 0.7;
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 48%);
+  }
+  #description h2{
+    font-family: "Fraunces";
+    font-weight: 900;
+    font-size: 35px;
+    margin: 20px 0;
+    line-height: 35px;
+    color: hsl(212, 21%, 14%);
+  }
+  #description p{
+    font-family: "Montserrat";
+    font-size: 14px;
+    margin-bottom: 35px;
+    color: hsl(228, 12%, 48%);
+    opacity: 0.7;
+    line-height: 20px;
+  }
+  #price{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    font-family: "Fraunces";
+    font-size: 30px;
+    color: hsl(158, 36%, 37%);
+  }
+  #price span{
+    display: block;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    font-size: 12px;
+    margin-left: 30px;
+    font-family: "Montserrat";
+  }
+  a{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 13px 0;
+    margin-top: 20px;
+    color: white;
+    background: hsl(158, 36%, 37%);
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+    text-decoration: none;
+    font-size: 14px;
+  }
+  a img{
+    display: inline-block;
+    margin-right: 15px;
+  }
+  @keyframes run {
+    0%{margin-left:0;margin-right:15px;}
+    25%{margin-left:-30px;margin-right: 45px;}
+    100%{margin-left:0;margin-right: 5px;}
+  }
+  a:hover{
+    background: hsl(158, 36%, 24%);
+  }
+  a:hover img{
+    animation-name: run;
+    animation-duration: 1s;
+  }
+@media only screen and (max-width:600px) {
+  #desktop{
+    display: none;
+  }
+  main{
+    width: 90%;
+    height: auto;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  #illustration{
+    width: 100%;
+    height: auto;
+  }
+  #description{
+    width: 100%;
+    height: auto;
+    background: white;
+    padding: 30px 25px;
+  }
+  #mobile{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media only screen and (min-width:601px) {
+    #mobile{
+      display: none;
+    }
+    main{
+      width: 45%;
+      height: auto;
+      margin: 100px auto;
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+   }
+    #illustration, #description {
+      width: 50%;
+      height: auto;
+   }
+    #desktop{
+      width: 100%;
+      height: 100%;
+    }
+    #description{
+      height: auto;
+      background: white;
+      padding: 30px 25px; 
+    } 
+}
